@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>View from Database</title>
+    <title>Delete from Database</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
@@ -16,14 +16,16 @@
         <div class="nav">
             <nav>
                 <ul>
-                    <li><a href="insert_into-db.php">Data Input</a></li>
-                    <li><a href="#" class="active">Input Result</a></li> 
-                    <li><a href="update_db.php"">Update Data</a></li>
-                    <li><a href="delete_from_db.php">Delete Data</a></li>
+                   <li><a href="insert_into-db.php">Data Input</a></li>
+                   <li><a href="insert_into-db.php">Input Result</a></li> 
+                   <li><a href="update_db.php"">Update Data</a></li>
+                   <li><a href="delete_from_db.php" class="active">Delete Data</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <h2 class="success"><?php echo @$_GET['Deleted']; ?></h2> <!-- //DevSkim: ignore DS163877 until 2018-11-07  -->
 
     <table>
         <caption>View from Database</caption>
@@ -34,6 +36,7 @@
             <th>Department</th>
             <th>Salary</th>
             <th>Home Address</th>
+            <th>Delete</th>
         </tr>
 
     <?php 
@@ -80,6 +83,11 @@
                 <td><?php echo $Dept; ?></td>
                 <td><?php echo $Salary; ?></td>
                 <td><?php echo $HomeAddress; ?></td>
+                <td>
+                    <a href="delete.php?Delete=<?php echo $Id;?>">
+                        <?php echo "Delete"; ?>
+                    </a>
+                </td>
             </tr>
 
         <?php } ?>

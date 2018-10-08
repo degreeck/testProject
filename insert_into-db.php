@@ -75,8 +75,10 @@
             <div class="nav">
                 <nav>
                     <ul>
-                    <li><a href="#" class="active">Data Input</a></li>
-                    <li><a href="view_from_db.php">Input Result</a></li> 
+                        <li><a href="#" class="active">Data Input</a></li>
+                        <li><a href="view_from_db.php">Input Result</a></li> 
+                        <li><a href="update_db.php"">Update Data</a></li>
+                        <li><a href="delete_from_db.php">Delete Data</a></li>
                     </ul>
                 </nav>
             </div>

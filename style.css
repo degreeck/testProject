@@ -32,6 +32,22 @@ body {
     height: 100vh;
 }
 
+a {
+    color: #61c419;
+    text-decoration: none;
+    translate: all 2ms;
+}
+
+a:hover {
+    color: #777;
+    transform: scale(1.2);
+}
+
+span.alert,
+.success {
+    display: none;
+}
+
 .container {
     position: relative;
     font-size: 1.8rem;
@@ -55,12 +71,13 @@ header {
 }
 
 .nav {
-    grid-column-start: 5;
+    grid-column-start: 3;
     grid-column-end: 7;
     padding: 2rem;
+    
 }
 
-ul {
+.nav ul {
     text-align: end;
 }
 
@@ -163,14 +180,15 @@ textarea {
     transform: scale(1.002);
 }
 
-span.alert {
+span.alert,
+.success {
     font-size: 2.5rem;
     color: rgb(22, 44, 1);
     padding: 1rem;
     background-color: var(--main-bg-color);
     border: 10px solid rgba(63, 194, 36, 0.333);
     border-radius: 2px;
-    margin: 2rem 0 0 2rem;
+    margin: 2rem 2rem 0 2rem;
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.45);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.45);
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.45);
